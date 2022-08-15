@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="durga1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1d6cb28f-7f9c-433d-a6b6-9d55a4ef3cbd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     quotation.`id` AS quotation_id,
+     quotation.`amount` AS quotation_amount,
+     quotation.`particular` AS quotation_particular,
+     quotation.`quantity` AS quotation_quantity,
+     quotation.`rate` AS quotation_rate,
+     quotation.`status` AS quotation_status
+FROM
+     `quotation` quotation]]>
+	</queryString>
+	<field name="quotation_id" class="java.lang.Integer"/>
+	<field name="quotation_amount" class="java.lang.Integer"/>
+	<field name="quotation_particular" class="java.lang.String"/>
+	<field name="quotation_quantity" class="java.lang.Integer"/>
+	<field name="quotation_rate" class="java.lang.Integer"/>
+	<field name="quotation_status" class="java.lang.Integer"/>
+	<variable name="sum" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{quotation_amount}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="344" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="204" width="20" height="20" uuid="7c3f80d9-637d-49cf-8df8-a89ec6d39818"/>
+				<text><![CDATA[To,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="128" width="29" height="20" uuid="ab24bc71-c9c9-4c82-9345-cf5a3a439e1b"/>
+				<text><![CDATA[Date: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="61" width="383" height="20" uuid="1d3bbf33-2e02-431d-841c-95fa92e87652"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Specialist in High Pressure Pipeline and provide its maintenance services]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="117" width="555" height="1" uuid="aae9f5f2-614c-44f0-8f48-bcc672571a22"/>
+			</line>
+			<staticText>
+				<reportElement x="91" y="10" width="383" height="44" uuid="89a4acca-d98e-44d1-8cf3-906126f3c466"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[SHRI  DURGA  DOMESTICS]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="8" y="10" width="61" height="44" uuid="ff764b6c-846e-422e-849d-b1eb7f5df6cf"/>
+				<imageExpression><![CDATA["E:\\Durga_Domestic\\DurgaDomesticLogo.jfif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="212" y="309" width="136" height="30" uuid="05239573-8362-4cc0-9f12-2a32d5ac1a83"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUOATATION]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="495" y="128" width="60" height="20" uuid="9be1ff54-8358-4b67-93a5-c8e8fe503c71"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="59" y="250" width="480" height="33" uuid="0ed461e1-996d-4fb1-8108-635e9a0a6771"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Dear sir or mam, it’s my pleasure to represent our rate quotation for gas pipeline as follow.]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="487" y="10" width="62" height="44" uuid="47fe66f1-64e0-4616-8f77-465a258c8268"/>
+				<imageExpression><![CDATA["E:\\Durga_Domestic\\DurgaDomesticLogo.jfif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="11" y="90" width="540" height="20" uuid="b6297fa7-dbbf-4579-84fc-96502935933e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[ADD: Juni Mangalwari mattipura road, Bagadganj, Nagpur 440008 . Mob: 9271276404 ,9422123144]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="81" width="555" height="1" uuid="844eb5e7-cb0a-4b31-b0d6-26ef4bf8cac7"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<line>
+				<reportElement x="426" y="12" width="1" height="24" uuid="9a8e3d56-e6cd-4d10-9722-9e09a2562cc6"/>
+			</line>
+			<line>
+				<reportElement x="273" y="10" width="1" height="24" uuid="0c79923a-3c85-4f17-9b11-52ab3d2b18ad"/>
+			</line>
+			<line>
+				<reportElement x="331" y="11" width="1" height="24" uuid="f7d3b9a0-3d05-41f4-9f36-5e4b0395cdc5"/>
+			</line>
+			<line>
+				<reportElement x="554" y="11" width="1" height="24" uuid="8fb2f299-a50b-44c7-b451-cfeb31257ddf"/>
+			</line>
+			<staticText>
+				<reportElement x="5" y="14" width="51" height="20" uuid="cfb75827-862f-4c3a-a754-f787283f1a3d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SRNO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="10" width="555" height="1" uuid="24449b81-8cc5-4c19-8c11-2b48a56c87a6"/>
+			</line>
+			<staticText>
+				<reportElement x="465" y="18" width="58" height="18" uuid="95862a0e-af3a-4d96-aacc-6ef26d11ffb8"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="16" width="35" height="19" uuid="b98af95d-2518-4bbc-9e32-146a5b2dc398"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="15" width="154" height="19" uuid="096ebfa0-6eed-4794-8f82-dc005112667f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARTICULAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="17" width="39" height="17" uuid="7adceb30-50f2-4cc2-acb7-cc2b3ae8f566"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUNT]]></text>
+			</staticText>
+			<line>
+				<reportElement x="58" y="12" width="1" height="24" uuid="6aab0d57-41bf-4127-8513-f686caa9a9f3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="35" width="555" height="1" uuid="60dccc50-2664-4c2f-ba32-f2df3c5c1ae1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="11" width="1" height="24" uuid="29293cd8-3c0c-40b6-8e4f-a92325bc21fc"/>
+			</line>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="43">
+			<line>
+				<reportElement x="554" y="0" width="1" height="40" uuid="9232af26-c8f0-4051-815c-c43b224a3a0e"/>
+			</line>
+			<line>
+				<reportElement x="273" y="0" width="1" height="40" uuid="425d8b57-b988-42ab-b099-047576323c06"/>
+			</line>
+			<textField>
+				<reportElement x="438" y="12" width="100" height="20" uuid="5b2ebee2-43d3-46d8-80ba-8834860a9f22"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{quotation_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="13" y="12" width="27" height="20" uuid="8d0fe19d-64b5-4266-aabd-68c8957d45ed"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{quotation_id}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="331" y="0" width="1" height="40" uuid="61d904ab-9812-4a32-a376-efb9bfbb5779"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="13a4dd13-4e85-48a5-bfbb-4a739dd43f8a"/>
+			</line>
+			<line>
+				<reportElement x="425" y="0" width="1" height="40" uuid="ec618ce4-4b06-431d-b322-8ec7dff2217b"/>
+			</line>
+			<textField>
+				<reportElement x="293" y="10" width="27" height="20" uuid="5886d0e9-f5da-4489-9031-883d3754918c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{quotation_quantity}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="40" width="555" height="1" uuid="47b07c47-8d5d-4b2e-a030-171d7fe4582b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="40" uuid="988b8be2-6109-4114-bd2c-2652b63e83f3"/>
+			</line>
+			<line>
+				<reportElement x="57" y="0" width="1" height="40" uuid="f692add6-a8b0-4aa1-9b18-14535072a8bc"/>
+			</line>
+			<textField>
+				<reportElement x="84" y="12" width="155" height="20" uuid="fafa8ab7-b1c8-44dd-82fb-89b8232f242c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{quotation_particular}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="12" width="49" height="20" uuid="9c9a2330-7053-42fb-b7ac-71bc13ffd57b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{quotation_rate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="283" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="59" width="548" height="49" isPrintInFirstWholeBand="true" uuid="85e6e31c-bf4d-4ec1-8254-be028005ead8"/>
+				<text><![CDATA[
+NOTE:-
+                  I.	We include everything which is necessary for Pipeline as per rules of HP Gas Pipeline Policy.
+                 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="245" width="141" height="20" uuid="213253a4-a75a-4115-8e88-acf9fe791435"/>
+				<text><![CDATA[SHRI DURGA DOEMSTICS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="10" width="548" height="1" uuid="73554611-bf8d-4b59-845b-0963a2c5dfbb"/>
+			</line>
+			<line>
+				<reportElement x="2" y="53" width="548" height="1" uuid="f2307bdb-e98d-45b6-a65e-e0c7d7792474"/>
+			</line>
+			<textField>
+				<reportElement x="445" y="20" width="100" height="20" uuid="e9ce5190-35c1-46bd-9c57-01f8e12b649f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{sum}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="457" y="200" width="45" height="36" uuid="d05a4015-9005-406a-9554-59478cfb6505"/>
+				<imageExpression><![CDATA["E:\\Durga_Domestic\\DDLogo.jpg.jfif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="51" y="110" width="491" height="20" uuid="24e6c3d8-6abe-4dc3-98db-199dad352b50"/>
+				<text><![CDATA[ II.       Defined rate is valid for 45days, because of fluctuation in price of raw material for pipeline. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="19" width="65" height="20" uuid="549bb5cf-eecc-423f-bcaf-95bf00409241"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
